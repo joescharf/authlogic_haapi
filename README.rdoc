@@ -2,6 +2,8 @@
 
 Authlogic OpenID is an extension of the Authlogic library to add OpenID support. Authlogic v2.0 introduced an enhanced API that makes "plugging in" alternate authentication methods as easy as installing a gem.
 
+Credits go to Matthew and Saro at http://matthewtodd.org/2009/02/19/using-authlogic-and-active_resource.html for inspiration and guidance.
+
 == Helpful links
 
 *	<b>Authlogic:</b> http://github.com/binarylogic/authlogic

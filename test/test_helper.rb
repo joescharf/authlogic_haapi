@@ -44,13 +44,10 @@ ActiveRecord::Schema.define(:version => 1) do
 end
 
 require "active_record/fixtures"
-require "openid"
 Rails = true # to trick authlogic into loading the rails adapter
 require File.dirname(__FILE__) + "/../../authlogic/lib/authlogic"
 require File.dirname(__FILE__) + "/../../authlogic/lib/authlogic/test_case"
 #require File.dirname(__FILE__) + "/libs/rails_trickery"
-require File.dirname(__FILE__) + '/libs/open_id_authentication/lib/open_id_authentication'
-require File.dirname(__FILE__) + '/../lib/authlogic_openid'  unless defined?(AuthlogicOpenid)
 require File.dirname(__FILE__) + '/libs/user'
 require File.dirname(__FILE__) + '/libs/user_session'
 
@@ -70,9 +67,5 @@ class ActiveSupport::TestCase
     
     def controller
       @controller ||= Authlogic::ControllerAdapters::RailsAdapter.new(ActionController.new)
-    end
-    
-    def redirecting_to_yahoo?
-      controller.redirecting_to.to_s =~ /^https:\/\/open.login.yahooapis.com\/openid\/op\/auth/
     end
 end

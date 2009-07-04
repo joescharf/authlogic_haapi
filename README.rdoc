@@ -1,0 +1,27 @@
+= Authlogic Haapi (Http Auth API)
+
+Authlogic OpenID is an extension of the Authlogic library to add OpenID support. Authlogic v2.0 introduced an enhanced API that makes "plugging in" alternate authentication methods as easy as installing a gem.
+
+== Helpful links
+
+*	<b>Authlogic:</b> http://github.com/binarylogic/authlogic
+
+== Install and use
+
+=== 1. Install the Authlogic Haapi gem
+
+  $ sudo gem install authlogic_haapi
+
+Now add the gem dependency in your config:
+
+  config.gem "authlogic_haapi"
+
+Or for older version of rails, install it as a plugin:
+
+  $ script/plugin install git://github.com/quantipay/authlogic_haapi.git
+
+=== 2. Configuration options:
+
+<b>allow_http_basic_auth_with_api_key, default = true</b> Indicates whether you wish to allow logging in by HTTP Auth using the API Key.
+
+Copyright (c) 2009 Joe Scharf of [QuantiPay](http://quantipay.com), released under the MIT license

@@ -1,3 +1,4 @@
+require 'authlogic'
 require "authlogic_haapi/version"
 require "authlogic_haapi/session"
 
